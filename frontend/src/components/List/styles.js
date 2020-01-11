@@ -8,6 +8,11 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 5px 0 rgba(103, 103, 178, 0.1);
+  position: relative;
+
+  @media (max-width: 420px) {
+    width: 100%;
+  }
 
   h1 {
     line-height: 180px;
@@ -93,6 +98,10 @@ export const NavItem = styled.div`
     justify-content: space-between;
     padding: 15px 30px;
     transition: 0.3s ease-out;
+
+    @media (max-width: 420px) {
+      padding: 15px 10px;
+    }
 
     li {
       &:nth-child(4) {

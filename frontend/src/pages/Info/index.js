@@ -3,7 +3,7 @@ import api from "../../services/api";
 
 import { Container } from "./styles";
 
-const Dates = props => {
+const Info = props => {
   const id = props.match.params.id;
   const [client, setClient] = useState({});
 
@@ -66,4 +66,4 @@ const Dates = props => {
   );
 };
 
-export default Dates;
+export default Info;

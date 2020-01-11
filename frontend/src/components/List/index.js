@@ -4,7 +4,7 @@ import { Container, Header, NavItem } from "./styles";
 
 const List = props => {
   return (
-    <Container>
+    <Container style={props.effectBlur}>
       <Header>
         <h2>Lista de clientes</h2>
         <div className="filter">
@@ -13,7 +13,7 @@ const List = props => {
             type="text"
             onChange={props.inputChange}
           />
-          <select onChange={props.typeFilter}>
+          <select onChange={props.selectChange}>
             <option value="">Filtrar</option>
             <option value="name">Nome</option>
             <option value="city">Cidade</option>

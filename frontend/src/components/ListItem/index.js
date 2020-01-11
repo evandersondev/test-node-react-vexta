@@ -5,21 +5,21 @@ import { Item } from "./styles";
 import { MdEdit } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";
 
-const ListItem = props => {
-  const url = `/dates/${props.id}`;
+const ListItem = ({ id, name, city, state }) => {
+  const url = `/info/${id}`;
 
   const deleteClient = async e => {
     e.preventDefault();
-    await api.delete(`/clientes/${props.id}`);
+    await api.delete(`/clientes/${id}`);
     window.location.reload();
   };
 
   return (
     <Item>
       <ul>
-        <li>{props.name}</li>
-        <li>{props.city}</li>
-        <li>{props.state}</li>
+        <li>{name}</li>
+        <li>{city}</li>
+        <li>{state}</li>
         <li>
           <a href={url}>
             <MdEdit />

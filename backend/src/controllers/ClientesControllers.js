@@ -3,6 +3,7 @@ const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
 module.exports = {
+  // Controller to list all clients and filter clients(name, city, state)
   async index(req, res) {
     const name = `%${req.query.name}%`;
     const city = `%${req.query.city}%`;
@@ -42,6 +43,7 @@ module.exports = {
     }
   },
 
+  // Controller to show one client only
   async show(req, res) {
     try {
       const id = req.params.id;
@@ -56,6 +58,7 @@ module.exports = {
     }
   },
 
+  // Controller to create new client
   async store(req, res) {
     try {
       const cliente = await Cliente.create(req.body);
@@ -66,6 +69,7 @@ module.exports = {
     }
   },
 
+  // Controller to update client
   async update(req, res) {
     try {
       const id = req.params.id;
@@ -85,6 +89,7 @@ module.exports = {
     }
   },
 
+  // Controller to delete client
   async destroy(req, res) {
     try {
       const id = req.params.id;

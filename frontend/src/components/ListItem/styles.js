@@ -16,14 +16,22 @@ export const Item = styled.div`
     padding: 10px 30px;
     transition: 0.3s ease-out;
 
+    @media (max-width: 420px) {
+      padding: 15px 10px;
+    }
+
     &:hover {
       background: #f0f1fa;
     }
 
     li {
-      width: 100px;
+      width: 200px;
       display: flex;
       justify-content: space-between;
+
+      &:nth-child(4) {
+        width: 60px;
+      }
 
       @media (max-width: 600px) {
         width: 60px;

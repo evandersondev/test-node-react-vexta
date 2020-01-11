@@ -27,7 +27,7 @@ Features usadas no Projeto.
 
 ## Getting started
 
-- Na pasta backend contém um arquivo .sql para a criacao do banco de dados em MySql.
+- Na pasta backend contém um arquivo _clientes.sql_ para a criaçao do banco de dados em MySql.
 
 - Execute `yarn dev` ou `npm run dev` na pasta backend.
 
