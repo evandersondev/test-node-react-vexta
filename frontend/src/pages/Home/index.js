@@ -36,7 +36,7 @@ const Home = () => {
     return (
       <div>
         <List inputChange={inputChange} typeFilter={typeFilter}>
-          <h1>Nao ha clientes cadastrados</h1>
+          <h1>Não há clientes cadastrados</h1>
         </List>
       </div>
     );
