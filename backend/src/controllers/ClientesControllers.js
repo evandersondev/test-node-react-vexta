@@ -11,24 +11,21 @@ module.exports = {
 
     let filter = {};
 
-    const getFilters = () => {
-      switch (Object.keys(req.query).toString()) {
-        case "name":
-          filter = { name: { [Op.like]: name } };
-          break;
-        case "city":
-          filter = { city: { [Op.like]: city } };
-          break;
-        case "state":
-          filter = { state: { [Op.like]: state } };
-          break;
-        default:
-          break;
-      }
-    };
+    switch (Object.keys(req.query).toString()) {
+      case "name":
+        filter = { name: { [Op.like]: name } };
+        break;
+      case "city":
+        filter = { city: { [Op.like]: city } };
+        break;
+      case "state":
+        filter = { state: { [Op.like]: state } };
+        break;
+      default:
+        break;
+    }
 
     try {
-      console.log(getFilters());
       const clientes = await Cliente.findAll({
         limit: 10,
         order: [["createdAt", "DESC"]],
