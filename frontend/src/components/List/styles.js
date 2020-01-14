@@ -75,9 +75,9 @@ export const Header = styled.div`
       }
 
       option {
-        display: block;
-        padding: 15px;
-        background-color: #fff;
+        color: #3b3b3b;
+        background: #fff;
+        font-size: 14px;
       }
     }
   }

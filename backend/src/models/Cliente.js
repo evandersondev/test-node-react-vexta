@@ -18,5 +18,9 @@ module.exports = dbConfig.sequelize.define("Clientes", {
   state: {
     type: dbConfig.Sequelize.STRING,
     allowNull: true
+  },
+  county: {
+    type: dbConfig.Sequelize.STRING,
+    allowNull: true
   }
 });

@@ -40,6 +40,34 @@ export const Container = styled.div`
       border-radius: 5px;
     }
 
+    select {
+      width: 100%;
+      height: 30px;
+      padding: 0 30px;
+      margin-top: 30px;
+      border: 1px solid #cbcbcb;
+      color: #3b3b3b;
+      font-size: 16px;
+      border-radius: 5px;
+      background: #fff;
+      transition: 0.3s ease-out;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background: #cbcbcb;
+      }
+
+      &:focus {
+        background: #fff;
+      }
+
+      option {
+        color: #3b3b3b;
+        background: #fff;
+      }
+    }
+
     button {
       display: block;
       width: 100%;
